@@ -1,11 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
-export const Home = () => {
+const Home = () => {
+
+  const data = useLoaderData()
+
   return (
     <div>
-        <Link to='/home'>Home</Link>
-        Home
+      <h2>This Is {data.length}</h2>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
