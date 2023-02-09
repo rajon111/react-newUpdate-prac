@@ -5,6 +5,7 @@ import Home  from './components/Home/Home';
 import Orders from './components/Orders/Orders';
 import Friends from './components/Friends/Friends';
 import Main from './layout/main'
+import FriendDetails from './components/Friends/FriendDetails/FriendDetails';
 
 function App() {
 
@@ -23,6 +24,12 @@ function App() {
           loader:()=>{
             return fetch(`https://jsonplaceholder.typicode.com/users`)},
           element: <Friends></Friends>,
+        },
+        {
+          path: "friend/:friendId",
+          loader:async({params})=>{
+            return fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`)},
+          element: <FriendDetails></FriendDetails>,
         },
         {
           path: "/about",
