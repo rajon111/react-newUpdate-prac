@@ -15,7 +15,6 @@ const Home = () => {
     const exist = cart.find(ts=>ts._id === tshirt._id);
     if(exist){
       alert('already added')
-
     }else{
       const newCart = [...cart,tshirt]
       setCart(newCart) 
