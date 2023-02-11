@@ -6,6 +6,7 @@ import Orders from './components/Orders/Orders';
 import Friends from './components/Friends/Friends';
 import Main from './layout/main'
 import FriendDetails from './components/Friends/FriendDetails/FriendDetails';
+import Hello from './components/Hello/Hello';
 
 function App() {
 
@@ -34,6 +35,10 @@ function App() {
         {
           path: "/about",
           element: <About></About>,
+        },
+        {
+          path: "/hello",
+          element: <Hello></Hello>,
         },
         {
           path: "/Orders",
